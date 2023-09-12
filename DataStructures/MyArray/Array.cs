@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace DataStructures.MyArray
 {
-    public class Array<T> : IEnumerable<T>, ICloneable
+    public class MyArray<T> : IEnumerable<T>, ICloneable
     {
         private T[] InnerArray;
         public int Count { get; private set; }
         public int Capacity => InnerArray.Length; //Only readabe `=>`
 
-        public Array()
+        public MyArray()
         {
             InnerArray = new T[1];
             Count = 0;
         }
-        public Array(params T[] array)
+        public MyArray(params T[] array)
         {
             InnerArray = new T[array.Length];
             Count = 0;
@@ -27,6 +27,7 @@ namespace DataStructures.MyArray
             {
                 Add(item);
             }
+            
         }
 
         public void Add(T data)
@@ -70,8 +71,7 @@ namespace DataStructures.MyArray
         {
             //return this.MemberwiseClone(); Shallow copy
 
-            //Deep copy
-            var arr= new Array<T>();
+            var arr= new MyArray<T>();
             foreach (var item in InnerArray)
             {
                 arr.Add(item);
@@ -88,5 +88,20 @@ namespace DataStructures.MyArray
         {
             return GetEnumerator();
         }
+
+        public int LinearSearch(object Element)
+        {
+            
+            for (int i = 0; i < Count; i++)
+            {
+                if (Element.Equals(InnerArray[i]))
+                {
+                    return i;
+                }
+                i++;
+            }
+            return -1;
+        }
+
     }
 }

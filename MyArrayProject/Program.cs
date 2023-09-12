@@ -1,4 +1,5 @@
-﻿using System.Security.AccessControl;
+﻿using DataStructures.MyArray;
+using System.Security.AccessControl;
 
 namespace MyArrayProject
 {
@@ -6,7 +7,15 @@ namespace MyArrayProject
     {
         static void Main(string[] args)
         {
+            var names=new MyArray<string>();
+            names.Add("Abdullah");
+            names.Add("Mehmet");
+            names.Add("Yusuf");
+            names.Add("Hakan");
+
+            Console.WriteLine(names.BinarySearch("Yusuf"));
             
+
         }
     }
 }

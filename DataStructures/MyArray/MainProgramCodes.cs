@@ -15,7 +15,7 @@ namespace DataStructures.MyArray
 
         private static void FundamentalsCodesOfArray()
         {
-            DataStructures.MyArray.Array<int> firstArray = new DataStructures.MyArray.Array<int>();
+            DataStructures.MyArray.MyArray<int> firstArray = new DataStructures.MyArray.MyArray<int>();
             firstArray.Add(1);
             firstArray.Add(2);
             firstArray.Add(3);
