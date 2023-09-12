@@ -13,7 +13,7 @@ namespace MyArrayProject
             names.Add("Yusuf");
             names.Add("Hakan");
 
-            Console.WriteLine(names.BinarySearch("Yusuf"));
+            Console.WriteLine(names.LinearSearch("Yusuf"));
             
 
         }
