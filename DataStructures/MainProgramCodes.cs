@@ -3,19 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataStructures.MyArray;
 
-namespace DataStructures.MyArray
+namespace DataStructuresLibrary
 {
     internal class MainProgramCodes
     {
         static void Main(string[] args)
         {
             //FundamentalsCodesOfArray();
+            //SerchingMethod();
+        }
+
+        private static void SerchingMethod()
+        {
+            var names = new MyArray<string>();
+            names.Add("Abdullah");
+            names.Add("Mehmet");
+            names.Add("Yusuf");
+            names.Add("Hakan");
+
+            Console.WriteLine(names.LinearSearch("Yusuf"));
         }
 
         private static void FundamentalsCodesOfArray()
         {
-            DataStructures.MyArray.MyArray<int> firstArray = new DataStructures.MyArray.MyArray<int>();
+            MyArray<int> firstArray = new MyArray<int>();
             firstArray.Add(1);
             firstArray.Add(2);
             firstArray.Add(3);

@@ -1,19 +1,23 @@
 ﻿using DataStructures.MyArray;
+using DataStructuresLibrary.MyLinkedList;
 using System.Security.AccessControl;
 
-namespace MyArrayProject
+namespace DataStructures
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var names=new MyArray<string>();
-            names.Add("Abdullah");
-            names.Add("Mehmet");
-            names.Add("Yusuf");
-            names.Add("Hakan");
-
-            Console.WriteLine(names.LinearSearch("Yusuf"));
+            var arr= new SinglyLinkedList<int>();
+            arr.AddBeginnig(5);
+            arr.AddBeginnig(6);
+            arr.AddBeginnig(7);
+                
+            arr.AddBeginnig(8);
+            arr.AddBeginnig(9);
+            arr.AddEndnig(10);
+            arr.AddEndnig(11);
+            Console.ReadKey();
             
 
         }
