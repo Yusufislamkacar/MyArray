@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDataStructures", "MyArrayProject\MyDataStructures.csproj", "{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDataStructures", "MyArrayProject\MyDataStructures.csproj", "{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructures", "DataStructures\DataStructures.csproj", "{6A4AEA47-E515-4610-8692-FEED8F772CAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresLibrary", "DataStructures\DataStructuresLibrary.csproj", "{6A4AEA47-E515-4610-8692-FEED8F772CAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

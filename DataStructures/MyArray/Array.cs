@@ -68,12 +68,20 @@ namespace DataStructures.MyArray
 
         public object Clone()
         {
-            throw new NotImplementedException();
+            //return this.MemberwiseClone(); Shallow copy
+
+            //Deep copy
+            var arr= new Array<T>();
+            foreach (var item in InnerArray)
+            {
+                arr.Add(item);
+            }return arr;
         }
 
         public IEnumerator<T> GetEnumerator()//IEnumerator interfacesi bize LINQ ifadelerini kullanabilme imkani verir. Foreach gibi.
         {
-            return InnerArray.Take(Count).GetEnumerator();
+           // return InnerArray.Select(x=>x).GetEnumerator();
+            return InnerArray.Take(Count).GetEnumerator(); //yanlizca degeri olan sayilari gormek icin take ifadesini kullandik. Count kadar eleman al demek istedik.
         }
 
         IEnumerator IEnumerable.GetEnumerator()
