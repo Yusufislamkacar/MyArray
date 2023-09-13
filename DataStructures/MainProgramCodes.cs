@@ -13,10 +13,22 @@ namespace DataStructuresLibrary
         static void Main(string[] args)
         {
             //FundamentalsCodesOfArray();
-            //SerchingMethod();
+            //SerchingOperation();
             //LinkedListBasicOperation();
+            //ForeachOperation();
 
-            
+        }
+
+        private static void ForeachOperation()
+        {
+            var list = new SinglyLinkedList<int>();
+            list.AddBeginnig(10);
+            list.AddBeginnig(20);
+            list.AddBeginnig(30);
+            foreach (int i in list)
+            {
+                Console.WriteLine(i);
+            }
         }
 
         private static void LinkedListBasicOperation()
@@ -34,7 +46,7 @@ namespace DataStructuresLibrary
             //88,6,12,55,5,99,10,11
         }
 
-        private static void SerchingMethod()
+        private static void SerchingOperation()
         {
             var names = new MyArray<string>();
             names.Add("Abdullah");

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataStructuresLibrary.MyLinkedList
 {
-    public class SinglyLinkedList<T>
+    public class SinglyLinkedList<T>:IEnumerable<T>
     {
         public SinglyLinkedListNode<T> Head { get; set; }
 
@@ -121,6 +122,16 @@ namespace DataStructuresLibrary.MyLinkedList
                 current = current.Next;
             }
             throw (new Exception("The reference node is not in this list."));
+        }
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new SinglyLinkedListEnumerator<T>(Head);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
         }
     }
         
