@@ -12,35 +12,117 @@ namespace DataStructuresLibrary.MyLinkedList
 
         public void AddBeginnig(T item)
         {
-            var newNode = new SinglyLinkedListNode<T>(item);  
+            var newNode = new SinglyLinkedListNode<T>(item);
+            if (Head == null)
+            {
+                Head = newNode;
+                return;
+            }
+            newNode.Next = Head;
             Head = newNode;
+              
+           
         }
         public void AddEndnig(T item)
         {
-            var A = Head;
-            while (Head != null)
+            var newNode = new SinglyLinkedListNode<T>(item);
+            if (Head == null)
             {
-                Head.Next = Head;
+                Head= newNode;
+                return;
             }
-            Head.Value=item;
-            Head = A;
+
+            var current = Head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            current.Next= newNode;
+            
         }
         public void AddAfter(SinglyLinkedListNode<T> node, T item)
         {
             var newNode = new SinglyLinkedListNode<T>(item);
             var current = Head;
-            while (Head != null)
+            while (current != null)
             {
-                if(Head == node)
+                if(current == node)
                 {
-                    newNode.Next = Head.Next;
-                    Head.Next= newNode;
-                    Head = current;
+                    newNode.Next = current.Next;
+                    current.Next= newNode;                    
                     return;
                 }
-                newNode.Next = Head;
+                current = current.Next;
             }
+            throw (new Exception("The reference node is not in this list."));
             
         }
+        public void AddAfter(SinglyLinkedListNode<T> node, SinglyLinkedListNode<T> newNode)
+        {
+            var current = Head;
+            while (current != null)
+            {
+                if (current == node)
+                {
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                    return;
+                }
+                current = current.Next;
+            }
+            throw (new Exception("The reference node is not in this list."));
+        }
+        public void AddBefore(SinglyLinkedListNode<T> node, T item)
+        {
+
+            var newNode = new SinglyLinkedListNode<T>(item);
+            var current = Head;
+
+            if (current == Head)
+            {
+                newNode.Next = Head;
+                Head = newNode;
+            }
+
+            while (current != null)
+            {
+                if (current.Next == node)
+                {
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                    return;
+                }
+                current = current.Next;
+            }
+            throw (new Exception("The reference node is not in this list."));
+
+        }
+        public void AddBefore(SinglyLinkedListNode<T> node, SinglyLinkedListNode<T> newNode)
+        {
+            var current = Head;
+            if (current == Head)
+            {
+                newNode.Next = Head;
+                Head = newNode;
+                return;
+            }
+                
+            while (current != null)
+            {
+                if (current.Next == node)
+                {   
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                    if (current==Head)
+                        Head = newNode;
+                    return;
+
+                }
+                current = current.Next;
+            }
+            throw (new Exception("The reference node is not in this list."));
+        }
     }
+        
+    
 }

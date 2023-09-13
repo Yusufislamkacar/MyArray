@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataStructures.MyArray;
+using DataStructuresLibrary.MyLinkedList;
 
 namespace DataStructuresLibrary
 {
@@ -13,6 +14,24 @@ namespace DataStructuresLibrary
         {
             //FundamentalsCodesOfArray();
             //SerchingMethod();
+            //LinkedListBasicOperation();
+
+            
+        }
+
+        private static void LinkedListBasicOperation()
+        {
+            var arr = new SinglyLinkedList<int>();
+            arr.AddBeginnig(5);
+            arr.AddBeginnig(6);
+            arr.AddEndnig(10);
+            arr.AddEndnig(11);
+            arr.AddAfter(arr.Head.Next, 99);
+            arr.AddAfter(arr.Head, new SinglyLinkedListNode<int>(12));
+            arr.AddBefore(arr.Head.Next.Next, 55);
+            arr.AddBefore(arr.Head, new SinglyLinkedListNode<int>(88));
+            Console.ReadKey();
+            //88,6,12,55,5,99,10,11
         }
 
         private static void SerchingMethod()
