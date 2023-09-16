@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDataStructures", "MyArrayProject\MyDataStructures.csproj", "{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresLibrary", "DataStructures\DataStructuresLibrary.csproj", "{6A4AEA47-E515-4610-8692-FEED8F772CAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{FEE2BAC3-1CBB-4B85-9EFA-FAC8CC5D0A64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A86AB3EB-7E65-40BB-8FC0-BCF00A827C5B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6A4AEA47-E515-4610-8692-FEED8F772CAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A4AEA47-E515-4610-8692-FEED8F772CAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A4AEA47-E515-4610-8692-FEED8F772CAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A4AEA47-E515-4610-8692-FEED8F772CAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE2BAC3-1CBB-4B85-9EFA-FAC8CC5D0A64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE2BAC3-1CBB-4B85-9EFA-FAC8CC5D0A64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE2BAC3-1CBB-4B85-9EFA-FAC8CC5D0A64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE2BAC3-1CBB-4B85-9EFA-FAC8CC5D0A64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

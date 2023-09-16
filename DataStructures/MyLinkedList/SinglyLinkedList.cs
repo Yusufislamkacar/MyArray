@@ -9,6 +9,17 @@ namespace DataStructuresLibrary.MyLinkedList
 {
     public class SinglyLinkedList<T>:IEnumerable<T>
     {
+        public SinglyLinkedList()
+        {
+
+        }
+        public SinglyLinkedList(IEnumerable<T> arr)
+        {
+            foreach (T item in arr)
+            {
+                AddEnding(item);
+            }
+        }
         public SinglyLinkedListNode<T> Head { get; set; }
 
         public void AddBeginnig(T item)
@@ -24,7 +35,7 @@ namespace DataStructuresLibrary.MyLinkedList
               
            
         }
-        public void AddEndnig(T item)
+        public void AddEnding(T item)
         {
             var newNode = new SinglyLinkedListNode<T>(item);
             if (Head == null)
@@ -122,6 +133,67 @@ namespace DataStructuresLibrary.MyLinkedList
                 current = current.Next;
             }
             throw (new Exception("The reference node is not in this list."));
+        }
+        public void RemoveFirst()
+        {
+            Head=Head.Next;
+        }
+        public void RemoveLast()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("The list already empty.");
+                return;
+            }
+            SinglyLinkedListNode<T> prev = null;
+            var current = Head;
+            while (current.Next != null)
+            {
+                prev = current;
+                current = current.Next;
+            }
+            if (prev == null)
+            {
+                Head = null;
+            }else
+                prev.Next = null;
+        }
+        public void Remove(T value)
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("The list already empty.");
+                return;
+            }
+            SinglyLinkedListNode<T> prev=null;
+            var current = Head;
+            
+            while (!(current.Value.Equals(value)) && !(current.Next==null))
+            {
+                prev = current;
+                current = current.Next;
+            }
+            if (!current.Value.Equals(value)) { Console.WriteLine("The item is not in list."); }
+            if (current.Next == null && prev==null)
+            {
+                RemoveLast();
+                return;
+            }          
+            else if (prev == null){
+                Head = Head.Next;
+                return;
+            }else if(current.Next == null)
+            {
+                RemoveLast();
+            }
+            else
+            {
+                prev.Next = current.Next; 
+            }
+                
+
+            
+
         }
 
         public IEnumerator<T> GetEnumerator()

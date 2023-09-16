@@ -16,7 +16,31 @@ namespace DataStructuresLibrary
             //SerchingOperation();
             //LinkedListBasicOperation();
             //ForeachOperation();
+            //CollectionMethod();
+            //RemoveLastOperation();
+        }
 
+        private static void RemoveLastOperation()
+        {
+            var arr = new SinglyLinkedList<int>();
+            arr.AddBeginnig(1);
+            arr.AddBeginnig(2);
+            arr.AddBeginnig(3);
+            arr.AddBeginnig(4);
+            arr.AddBeginnig(5);
+            arr.RemoveLast();
+            arr.RemoveLast();
+            arr.RemoveLast();
+            arr.RemoveLast();
+
+            foreach (int i in arr) { Console.WriteLine(i); }
+        }
+
+        private static void CollectionMethod()
+        {
+            MyArray<int> arr = new MyArray<int>(new int[] { 1, 2, 3, 4, 5, 6 });
+            var arr2 = new SinglyLinkedList<int>(arr);
+            foreach (int i in arr2) { Console.WriteLine(i); }
         }
 
         private static void ForeachOperation()
@@ -36,8 +60,8 @@ namespace DataStructuresLibrary
             var arr = new SinglyLinkedList<int>();
             arr.AddBeginnig(5);
             arr.AddBeginnig(6);
-            arr.AddEndnig(10);
-            arr.AddEndnig(11);
+            arr.AddEnding(10);
+            arr.AddEnding(11);
             arr.AddAfter(arr.Head.Next, 99);
             arr.AddAfter(arr.Head, new SinglyLinkedListNode<int>(12));
             arr.AddBefore(arr.Head.Next.Next, 55);
