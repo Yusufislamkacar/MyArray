@@ -1,5 +1,6 @@
 ﻿using DataStructures.MyArray;
 using DataStructuresLibrary.MyLinkedList;
+using DataStructuresLibrary.MyStack;
 
 namespace Main
 {
@@ -7,59 +8,12 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            var arr = new SinglyLinkedList<int>();
-            arr.AddEnding(1);
-            arr.AddEnding(2);    
-            arr.AddEnding(3);
-            arr.AddEnding(4);
-            arr.AddEnding(5);
-            arr.AddEnding(6);
-
-            foreach (var item in arr) {
-                Console.Write(item);
-            }
+            var linkedlist= new SinglyLinkedList<int>(new int[]{ 1,2,3,4,5});
+            foreach(int i in linkedlist) { Console.WriteLine(i); }
 
             Console.WriteLine();
-            arr.Remove(2);
-            foreach (var item in arr)
-            {
-                Console.Write(item);
-            }
-
-            Console.WriteLine();
-            arr.Remove(3);
-            foreach (var item in arr)
-            {
-                Console.Write(item);
-            }
-
-            Console.WriteLine();
-            arr.Remove(5);
-            foreach (var item in arr)
-            {
-                Console.Write(item);
-            }
-            Console.WriteLine();
-            arr.Remove(6);
-            foreach (var item in arr)
-            {
-                Console.Write(item);
-            }
-            Console.WriteLine();
-            arr.Remove(1);
-            foreach (var item in arr)
-            {
-                Console.Write(item);
-            }
-            Console.WriteLine();
-            arr.Remove(4);
-            //foreach (var item in arr)
-            //{
-            //    Console.Write(item);
-            //}
-            
-
-
+            var stack = new MyStack<int>(linkedlist);
+            foreach (int i in stack) { Console.WriteLine(i); }
 
 
         }

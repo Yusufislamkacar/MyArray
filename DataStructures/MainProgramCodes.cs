@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DataStructures.MyArray;
 using DataStructuresLibrary.MyLinkedList;
+using DataStructuresLibrary.MyStack;
 
 namespace DataStructuresLibrary
 {
@@ -18,6 +19,88 @@ namespace DataStructuresLibrary
             //ForeachOperation();
             //CollectionMethod();
             //RemoveLastOperation();
+            //RemoveOperations();
+            //FundamentalStackOperations();
+            //PowerOfIEnumerator();
+
+        }
+
+        private static void PowerOfIEnumerator()
+        {
+            var linkedlist = new SinglyLinkedList<int>(new int[] { 1, 2, 3, 4, 5 });
+            foreach (int i in linkedlist) { Console.WriteLine(i); }
+
+            Console.WriteLine();
+            var stack = new MyStack<int>(linkedlist);
+            foreach (int i in stack) { Console.WriteLine(i); }
+        }
+
+        private static void FundamentalStackOperations()
+        {
+            var stack = new MyStack<int>();
+            stack.Push(0);
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Pop();
+            stack.peek();
+            foreach (int i in stack) { Console.WriteLine(i); }
+        }
+
+        private static void RemoveOperations()
+        {
+            var arr = new SinglyLinkedList<int>();
+            arr.AddEnding(1);
+            arr.AddEnding(2);
+            arr.AddEnding(3);
+            arr.AddEnding(4);
+            arr.AddEnding(5);
+            arr.AddEnding(6);
+
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+
+            Console.WriteLine();
+            arr.Remove(2);
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+
+            Console.WriteLine();
+            arr.Remove(3);
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+
+            Console.WriteLine();
+            arr.Remove(5);
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();
+            arr.Remove(6);
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();
+            arr.Remove(1);
+            foreach (var item in arr)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();
+            arr.Remove(4);
+            //foreach (var item in arr)
+            //{
+            //    Console.Write(item);
+            //}
         }
 
         private static void RemoveLastOperation()
